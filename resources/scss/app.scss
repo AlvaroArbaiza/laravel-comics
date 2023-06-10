@@ -84,7 +84,7 @@ main {
     // jumbotron
     #jumbotron {
         min-height: 350px;
-        background: url("/images/jumbotron.jpg");
+        background: url("../img/jumbotron.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -194,7 +194,7 @@ footer {
     // links
     #links {
         height: 400px;
-        background: url("/resources/images/footer-bg.jpg");
+        background: url("../img/footer-bg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -203,7 +203,7 @@ footer {
             @include center('vertical');
             justify-content: flex-start;
             height: 100%;
-            background: url("/resources/images/dc-logo-bg.png");
+            background: url("../img/dc-logo-bg.png");
             background-repeat: no-repeat;
             background-position: center right;
 

@@ -55,7 +55,7 @@
                     
                     @foreach($socials as $element)
                         <a href="#">                            
-                            <img :src="{{ Vite::asset('resources/images/' . $element['url']) }}" :alt="{{ $element['name'] }}">
+                            <img src="{{ Vite::asset('resources/img/' . $element['url']) }}" alt="{{ $element['name'] }}">
                         </a>
                     @endforeach
                 </div>

@@ -4,7 +4,7 @@
         <!-- logo -->
         <div id="logo">
             <a href="{{ route('home') }}">
-                <img src="{{ Vite::asset('resources/images/dc-logo.png') }}" alt="logo dc comics">
+                <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="logo dc comics">
             </a>
         </div>
 

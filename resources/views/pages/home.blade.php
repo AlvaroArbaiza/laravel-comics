@@ -1,5 +1,9 @@
 @extends('layout.app')
 
+@section('title')
+    Laravel Comics | Home
+@endsection
+
 @section('content')
     <main>
 
@@ -37,7 +41,7 @@
 
                         <!-- img -->
                         <div class="img">
-                            <img :src="{{ Vite::asset('resources/images/' . $card['url']) }}" :alt="{{ $card['name']}}">
+                            <img :src="{{ Vite::asset('resources/img/' . $card['url']) }}" :alt="{{ $card['name']}}">
                         </div>
                         <h3>{{ $card['name'] }}</h3>
                     </div>
