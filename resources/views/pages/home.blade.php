@@ -20,8 +20,13 @@
                     <span>current series</span>
                 </div>
 
-                <!-- series -->
-                {{-- <CardComp v-for="(elem, index) in cardsArray" :key="index" :dettagliProdotto="elem" /> --}}
+                <!-- Series -->
+                @foreach($comicBooks as $book)
+                    <div class="series">
+                        <img src="{{ $book['thumb'] }}" alt="{{ $book['series'] }}">
+                        <h5>{{ $book['series'] }}</h5>
+                    </div>
+                @endforeach
 
                 <!-- load more -->
                 <div id="load-more">
@@ -41,7 +46,7 @@
 
                         <!-- img -->
                         <div class="img">
-                            <img :src="{{ Vite::asset('resources/img/' . $card['url']) }}" :alt="{{ $card['name']}}">
+                            <img src="{{ Vite::asset('resources/img/' . $card['url']) }}" alt="{{ $card['name']}}">
                         </div>
                         <h3>{{ $card['name'] }}</h3>
                     </div>

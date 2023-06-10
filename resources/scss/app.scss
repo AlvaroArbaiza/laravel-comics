@@ -130,6 +130,7 @@ main {
                 h5 {
                     color: #fff;
                     margin: 15px 0;
+                    font-size: 0.83rem;
                     font-weight: 400;
                     text-transform: uppercase;
                 }
@@ -221,13 +222,16 @@ footer {
                     margin-bottom: 10px;
 
                     h3 {
+                        font-size: 1.17rem;
                         margin: 0.5rem 0;
                         text-transform: uppercase;
                         color: #fff;
                     }
 
                     ul {
+
                         li {
+                            line-height: 1.1rem;
                             list-style-type: none;
                             padding: 0.1rem 0;
                             font-weight: 400;

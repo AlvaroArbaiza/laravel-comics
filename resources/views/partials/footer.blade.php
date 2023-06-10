@@ -11,8 +11,8 @@
                 @foreach($comics as $element)
                     <div class="lists">
 
-                        <h3>{{ $element['id'] }}</h3>
-                        <ul>
+                        <h3 class="fw-bold">{{ $element['id'] }}</h3>
+                        <ul class="p-0 m-0">
 
                             @foreach($element['links'] as $link )
                                 <li>
@@ -62,7 +62,4 @@
             </div>
         </div>
     </section>
-    <span>
-        @dccomics
-    </span>
 </footer>
