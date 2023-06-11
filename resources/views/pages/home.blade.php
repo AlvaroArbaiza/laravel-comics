@@ -8,54 +8,52 @@
 {{-- Main Content --}}
 @section('content')
 
-    <main>
-        <!-- contents -->
-        <section id="contents">
-            <div class="container">
+    <!-- contents -->
+    <section id="contents">
+        <div class="container">
 
-                <!-- current series -->
-                <div id="cur-series">
-                    <span>current series</span>
-                </div>
-
-                <!-- Series -->
-                @foreach($comicBooks as $index => $book)
-                    <div class="series">
-
-                        {{-- img --}}
-                        <a href="{{ route('comics' , ['index' => $index]) }}">
-                            <img src="{{ $book['thumb'] }}" alt="{{ $book['series'] }}">
-                        </a>
-
-                        {{-- title --}}
-                        <h5>{{ $book['series'] }}</h5>
-                    </div>
-                @endforeach
-
-                <!-- load more -->
-                <div id="load-more">
-                    <span>load more</span>
-                </div>
-
+            <!-- current series -->
+            <div id="cur-series">
+                <span>current series</span>
             </div>
-        </section>
 
-        <!-- cards -->
-        <section id="cards">
-            <div class="container">
+            <!-- Series -->
+            @foreach($comicBooks as $index => $book)
+                <div class="series">
 
-                <!-- card -->
-                @foreach($cards as $card)
-                    <div class="dcCard">
+                    {{-- img --}}
+                    <a href="{{ route('comics' , ['index' => $index]) }}">
+                        <img src="{{ $book['thumb'] }}" alt="{{ $book['series'] }}">
+                    </a>
 
-                        <!-- img -->
-                        <div class="img">
-                            <img src="{{ Vite::asset('resources/img/' . $card['url']) }}" alt="{{ $card['name']}}">
-                        </div>
-                        <h3>{{ $card['name'] }}</h3>
-                    </div>
-                @endforeach
+                    {{-- title --}}
+                    <h5>{{ $book['series'] }}</h5>
+                </div>
+            @endforeach
+
+            <!-- load more -->
+            <div id="load-more">
+                <span>load more</span>
             </div>
-        </section>
-    </main>
+
+        </div>
+    </section>
+
+    <!-- cards -->
+    <section id="cards">
+        <div class="container">
+
+            <!-- card -->
+            @foreach($cards as $card)
+                <div class="dcCard">
+
+                    <!-- img -->
+                    <div class="img">
+                        <img src="{{ Vite::asset('resources/img/' . $card['url']) }}" alt="{{ $card['name']}}">
+                    </div>
+                    <h3>{{ $card['name'] }}</h3>
+                </div>
+            @endforeach
+        </div>
+    </section>
 @endsection
