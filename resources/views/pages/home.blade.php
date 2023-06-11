@@ -1,16 +1,14 @@
 @extends('layout.app')
 
+{{-- Head | title --}}
 @section('title')
     Laravel Comics | Home
 @endsection
 
+{{-- Main Content --}}
 @section('content')
+
     <main>
-
-        <!-- jumbotron -->
-        <section id="jumbotron">
-
-        </section>
         <!-- contents -->
         <section id="contents">
             <div class="container">

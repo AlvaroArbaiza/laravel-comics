@@ -36,4 +36,9 @@
             </ul>
         </nav>
     </div>
+    
+    <!-- jumbotron -->
+    <section id="jumbotron">
+
+    </section>
 </header>
