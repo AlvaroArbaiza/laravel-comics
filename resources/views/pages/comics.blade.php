@@ -31,7 +31,7 @@
                 <div class="info d-flex mb-2">
     
                     {{-- price --}}
-                    <div class="price d-flex justify-content-between border-bottom border-end border-black py-2 px-3 fw-bold">
+                    <div class="price d-flex justify-content-between border-bottom border-end border-2 border-black py-2 px-3 fw-bold">
                         <span class="left text-white-50">
                             U.S. Price:
                             <span class="text-white">
@@ -46,7 +46,7 @@
                     </div>
                     
                     {{-- availability --}}
-                    <div class="available border-bottom border-black py-2 px-3 text-center text-white fw-bold">
+                    <div class="available border-bottom border-2 border-black py-2 px-3 text-center text-white fw-bold">
                         <span>
                             Check Availability
                             <i class="bi bi-caret-down-fill align-middle"></i>
@@ -77,7 +77,7 @@
         </section>
 
         {{-- details --}}
-        <section class="details py-4">
+        <section class="details pt-4 border-top border-light-subtle border-2">
             <div class="container d-flex">
 
                 {{-- talent --}}
@@ -87,25 +87,33 @@
                     <h5 class="fw-bold mb-4">Talent</h5>
 
                     {{-- art by --}}
-                    <div class="border-top border-bottom border-dark-subtle py-2 d-flex justify-content-between">
+                    <div class="border-top border-bottom border-2 border-light-subtle py-2 d-flex justify-content-between">
                         <h6 class="w-25">Art by:</h6>
 
                         {{-- artists --}}
                         <p class="w-75">
                             @foreach($currentComic['artists'] as $artist)
-                                <span>{{ $artist }}</span>,
+                                @if($loop->last)
+                                    <span>{{ $artist }}</span>
+                                @else
+                                    <span>{{ $artist }}</span>,    
+                                @endif
                             @endforeach
                         </p>
                     </div>
 
                     {{-- written by --}}
-                    <div class="border-bottom border-dark-subtle  py-2 d-flex justify-content-between">
+                    <div class="border-bottom border-light-subtle border-2 py-2 d-flex justify-content-between">
                         <h6 class="w-25">Written by:</h6>
 
                         {{-- writers --}}
                         <p class="w-75">
                             @foreach($currentComic['writers'] as $writer)
-                                <span>{{ $writer }}</span>,
+                                @if($loop->last)
+                                    <span>{{ $writer }}</span>
+                                @else
+                                    <span>{{ $writer }}</span>,
+                                @endif
                             @endforeach
                         </p>
                     </div>
@@ -119,7 +127,7 @@
                     <h5 class="fw-bold mb-4">Specs</h5>
 
                     {{-- series --}}
-                    <div class="border-top border-bottom border-dark-subtle py-2 d-flex justify-content-between">
+                    <div class="border-top border-bottom border-2 border-light-subtle py-2 d-flex justify-content-between">
                         <h6>Series:</h6>
                         <span>
                             {{ $currentComic['series']}}
@@ -135,7 +143,7 @@
                     </div>
 
                     {{-- on sale date --}}
-                    <div class="border-top border-bottom border-dark-subtle py-2 d-flex justify-content-between">
+                    <div class="border-top border-bottom border-2 border-light-subtle py-2 d-flex justify-content-between">
                         <h6>On Sale Date:</h6>
                         <span class="text-dark">
                             {{ $currentComic['sale_date']}}
@@ -143,7 +151,25 @@
                     </div>
                 </div>
             </div>
+        </section>
 
+        {{-- card icon --}}
+        <section class="card-icon border-top border-light-subtle border-2">
+            <div class="container">
+
+                <!-- card -->
+                @foreach($cards as $card)
+                    <div class="dcCard border border-light-subtle border-2">
+
+                        <h3 class="fw-bold">{{ $card['name'] }}</h3>
+
+                        <!-- img -->
+                        <div class="img">
+                            <img src="{{ Vite::asset('resources/img/' . $card['url']) }}" alt="{{ $card['name']}}">
+                        </div>
+                    </div>
+                @endforeach
+            </div>
         </section>
     </main>
 @endsection
