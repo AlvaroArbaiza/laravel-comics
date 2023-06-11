@@ -21,7 +21,15 @@ Route::get('/', function () {
     return view('pages.home', compact('comicBooks'));
 })->name('home');
 
-// comic
-Route::get('/comic', function () {
-    return view('pages.comic');
-})->name('comic');
+/*********************  
+    comics   
+**********************/
+
+// In questa funzione ho creato una varabile index che otterrà il valore dell'index del @foreach passato al click sulla card dei fumetti in SERIES nella HOME
+Route::get('/comics/{index}', function($index) {
+    return view('pages.comics', ['index' => $index]);
+})->name('comics');
+
+/*********************  
+    end comics   
+**********************/

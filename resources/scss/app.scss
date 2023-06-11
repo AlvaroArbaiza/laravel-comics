@@ -66,9 +66,20 @@ header {
 
                     &:hover hr {
                         border: 3px solid #0282f9;
+                        opacity: 1;
                     }
 
                     &:hover a {
+                        color: #0282f9;
+                    }
+                }
+
+                .active {
+                    hr {
+                        border: 3px solid #0282f9;
+                        opacity: 1;
+                    }
+                    a {
                         color: #0282f9;
                     }
                 }
@@ -231,7 +242,7 @@ footer {
                     ul {
 
                         li {
-                            line-height: 1.1rem;
+                            line-height: 1rem;
                             list-style-type: none;
                             padding: 0.1rem 0;
                             font-weight: 400;

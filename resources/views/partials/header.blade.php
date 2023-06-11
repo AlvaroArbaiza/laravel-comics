@@ -12,12 +12,26 @@
         <nav>
             <ul>
                 @foreach($comics[0]['links'] as $link)
-                    <li>
-                        <a href="#">                        
-                            <span>{{ $link['name'] }}</span>
-                            <hr>
-                        </a>
-                    </li>
+
+                    {{-- se active è true --}}
+                    @if($link['active'])
+
+                        {{-- se la route corrente corrisponde a $link['url'] e inizia con la route passata dalla variabile otterrà la classe 'active' --}}
+                        <li class="{{ Str::startsWith(request()->url(), route($link['url'])) ? 'active' : '' }}">
+                            <a href="{{ route($link['url']) }}">                        
+                                <span>{{ $link['name'] }}</span>
+                                <hr>
+                            </a>
+                        </li>
+                    {{-- se active è false --}}
+                    @else
+                        <li>
+                            <a href="#">                        
+                                <span>{{ $link['name'] }}</span>
+                                <hr>
+                            </a>
+                        </li>
+                    @endif
                 @endforeach
             </ul>
         </nav>

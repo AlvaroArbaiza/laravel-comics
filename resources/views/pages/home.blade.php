@@ -21,9 +21,15 @@
                 </div>
 
                 <!-- Series -->
-                @foreach($comicBooks as $book)
+                @foreach($comicBooks as $index => $book)
                     <div class="series">
-                        <img src="{{ $book['thumb'] }}" alt="{{ $book['series'] }}">
+
+                        {{-- img --}}
+                        <a href="{{ route('comics' , ['index' => $index]) }}">
+                            <img src="{{ $book['thumb'] }}" alt="{{ $book['series'] }}">
+                        </a>
+
+                        {{-- title --}}
                         <h5>{{ $book['series'] }}</h5>
                     </div>
                 @endforeach

@@ -6,43 +6,63 @@ return [
         "links" => [
             [
                 "name" => "Characters",
-                "show" => true
+                "show" => true,
+                "url" => "#",
+                "active" => false
             ],
             [
                 "name" => "Comics",
-                "show" => true
+                "show" => true,
+                "url" => "home",
+                "active" => true
             ],
             [
                 "name" => "Movies",
-                "show" => true
+                "show" => true,
+                "url" => "#",
+                "active" => false
             ],
             [
                 "name" => "TV",
-                "show" => true
+                "show" => true,
+                "url" => "#",
+                "active" => false
             ],
             [
                 "name" => "Games",
-                "show" => true
+                "show" => true,
+                "url" => "#",
+                "active" => false
             ],
             [
                 "name" => "Collectibles",
-                "show" => false
+                "show" => false,
+                "url" => "#",
+                "active" => false
             ],
             [
                 "name" => "Videos",
-                "show" => true
+                "show" => true,
+                "url" => "#",
+                "active" => false
             ],
             [
                 "name" => "Fans",
-                "show" => false
+                "show" => false,
+                "url" => "#",
+                "active" => false
             ],
             [
                 "name" => "News",
-                "show" => true
+                "show" => true,
+                "url" => "#",
+                "active" => false
             ],
             [
                 "name" => "Shop",
-                "show" => true
+                "show" => true,
+                "url" => "#",
+                "active" => false
             ]
         ]
     ],
